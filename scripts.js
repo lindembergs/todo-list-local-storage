@@ -19,10 +19,15 @@ function showTasks() {
     <li class="task">
     <img src="img/checked.png" alt="imagem do check" />
     <p>${task}</p>
-    <img src="img/trash.png" alt="imagem do check" />
+    <img src="img/trash.png" alt="imagem do check" onclick="deleteItem()" />
   </li>`;
   });
   taskList.innerHTML = newLi;
+}
+function deleteItem() {
+  taskList.innerHTML = "";
+
+  console.log("delete funcionou!");
 }
 
 button.addEventListener("click", addNewTask);
