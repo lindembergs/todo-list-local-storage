@@ -1,12 +1,28 @@
 const input = document.querySelector("#input");
 const button = document.querySelector("#button");
+const taskList = document.querySelector(".task-list");
 
-let minhaListaDeItens = [];
+let MyItemsList = [];
 
-function adicionarNovaTarefa() {
-  minhaListaDeItens.push(input.value);
+function addNewTask() {
+  MyItemsList.push(input.value);
   input.value = "";
+  showTasks();
 }
-function mostrarTarefas() {}
+function showTasks() {
+  let newLi = "";
 
-button.addEventListener("click", adicionarNovaTarefa);
+  MyItemsList.forEach((task) => {
+    newLi =
+      newLi +
+      `
+    <li class="task">
+    <img src="img/checked.png" alt="imagem do check" />
+    <p>${task}</p>
+    <img src="img/trash.png" alt="imagem do check" />
+  </li>`;
+  });
+  taskList.innerHTML = newLi;
+}
+
+button.addEventListener("click", addNewTask);
