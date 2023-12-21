@@ -41,6 +41,7 @@ function reloadTasks() {
   const localStorageTasks = localStorage.getItem("lista");
   MyItemsList = localStorageTasks ? JSON.parse(localStorageTasks) : [];
 }
+
 showTasks();
 reloadTasks();
 button.addEventListener("click", addNewTask);
