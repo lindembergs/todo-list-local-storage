@@ -85,3 +85,9 @@ img {
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
+
+/* classe controlada pelo js */
+.done {
+  background-color: #8fac55 !important;
+  text-decoration: line-through;
+}
