@@ -12,22 +12,21 @@ function addNewTask() {
 function showTasks() {
   let newLi = "";
 
-  MyItemsList.forEach((task) => {
+  MyItemsList.forEach((task, index) => {
     newLi =
       newLi +
       `
     <li class="task">
     <img src="img/checked.png" alt="imagem do check" />
     <p>${task}</p>
-    <img src="img/trash.png" alt="imagem do check" onclick="deleteItem()" />
+    <img src="img/trash.png" alt="imagem do check" onclick="deleteItem(${index})" />
   </li>`;
   });
   taskList.innerHTML = newLi;
 }
-function deleteItem() {
-  taskList.innerHTML = "";
-
-  console.log("delete funcionou!");
+function deleteItem(index) {
+  MyItemsList.splice(index, 1);
+  showTasks();
 }
 
 button.addEventListener("click", addNewTask);
