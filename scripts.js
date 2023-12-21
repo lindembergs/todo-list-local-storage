@@ -42,6 +42,6 @@ function reloadTasks() {
   MyItemsList = localStorageTasks ? JSON.parse(localStorageTasks) : [];
 }
 
-showTasks();
 reloadTasks();
+showTasks();
 button.addEventListener("click", addNewTask);
