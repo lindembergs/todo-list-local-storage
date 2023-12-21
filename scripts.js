@@ -26,6 +26,8 @@ function showTasks() {
     </li>`;
   });
   taskList.innerHTML = newLi;
+
+  localStorage.setItem("lista", JSON.stringify(MyItemsList));
 }
 function deleteItem(index) {
   MyItemsList.splice(index, 1);
@@ -35,5 +37,10 @@ function completeTask(index) {
   MyItemsList[index].completed = !MyItemsList[index].completed;
   showTasks();
 }
-
+function reloadTasks() {
+  const localStorageTasks = localStorage.getItem("lista");
+  MyItemsList = JSON.parse(localStorageTasks);
+  showTasks();
+}
+reloadTasks();
 button.addEventListener("click", addNewTask);
