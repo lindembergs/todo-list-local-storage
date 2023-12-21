@@ -39,7 +39,7 @@ function completeTask(index) {
 }
 function reloadTasks() {
   const localStorageTasks = localStorage.getItem("lista");
-  MyItemsList = JSON.parse(localStorageTasks);
+  MyItemsList = localStorageTasks ? JSON.parse(localStorageTasks) : [];
 }
 showTasks();
 reloadTasks();
