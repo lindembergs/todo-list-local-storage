@@ -10,6 +10,7 @@ function addNewTask() {
     completed: false,
   });
   input.value = "";
+
   showTasks();
 }
 function showTasks() {
@@ -45,3 +46,17 @@ function reloadTasks() {
 reloadTasks();
 showTasks();
 button.addEventListener("click", addNewTask);
+
+function keyEnter() {
+  input.addEventListener("keydown", (e) => {
+    e.keyCode === 13 && addNewTask();
+  });
+}
+
+keyEnter();
+
+// function blockEmptyString() {
+//   if (input.value === "") {
+//     alert("você precisa preencher este campo");
+//   }
+// }
