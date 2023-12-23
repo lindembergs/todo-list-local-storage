@@ -57,9 +57,3 @@ function keyEnter() {
 }
 
 keyEnter();
-
-// function blockEmptyString() {
-//   if (input.value === "") {
-//     alert("você precisa preencher este campo");
-//   }
-// }
