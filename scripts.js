@@ -5,13 +5,16 @@ const taskList = document.querySelector(".task-list");
 let MyItemsList = [];
 
 function addNewTask() {
-  MyItemsList.push({
-    task: input.value,
-    completed: false,
-  });
-  input.value = "";
-
-  showTasks();
+  if (input.value === "") {
+    alert("Por favor, preencha este campo!");
+  } else {
+    MyItemsList.push({
+      task: input.value,
+      completed: false,
+    });
+    input.value = "";
+    showTasks();
+  }
 }
 function showTasks() {
   let newLi = "";
