@@ -1,0 +1,20 @@
+{
+    "name": "Lista de Tarefas",
+    "short_name": "Tarefas",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2196F3",
+    "icons": [
+        {
+            "src": "/public/favicon.ico",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/public/favicon.ico",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
