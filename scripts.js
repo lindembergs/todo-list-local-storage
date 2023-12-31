@@ -26,7 +26,7 @@ function showTasks() {
       <li class="task ${item.completed ? "done" : ""}">
       <img src="img/checked.png" alt="imagem do check" onclick="completeTask(${index})" />
       <p>${item.task}</p>
-      <img src="img/trash.png" alt="imagem do check" onclick="deleteItem(${index})" />
+      <img src="img/trash.png" alt="Excluir" onclick="deleteItem(${index})" />
     </li>`;
   });
   taskList.innerHTML = newLi;
